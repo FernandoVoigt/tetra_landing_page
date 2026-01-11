@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grid com Carrossel</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="grid">        
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal" id="modal">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+
+
+            <button class="prev" onclick="mudarSlide(-1)">❮</button>
+            <img id="imagemModal">
+            <button class="next" onclick="mudarSlide(1)">❯</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
