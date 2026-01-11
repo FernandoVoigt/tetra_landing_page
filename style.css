@@ -111,6 +111,7 @@ body {
 }
 
 .service-card {
+    text-align: center;
     background: white;
     padding: 2rem;
     border-radius: 10px;
