@@ -78,6 +78,7 @@
 }
 
 .fechar {
+    margin: 10px;
     position: absolute;
     top: 20px;
     right: 30px;
@@ -88,6 +89,7 @@
 
 .prev,
 .next {
+    margin: 0 15px;
     background: none;
     color: white;
     font-size: 40px;

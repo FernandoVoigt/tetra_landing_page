@@ -1,20 +1,4 @@
 // Smooth scroll para os links de navegação
-/*
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        console.log(target);
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-                inline: 'start'
-            });
-        }
-    });
-});
-*/
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
