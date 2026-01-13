@@ -43,15 +43,15 @@ function abrirModal(tema) {
 
     preloadImages(images[temaAtual]);
     imagemModal.src = images[temaAtual][index];
-    
-    document.addEventListener("touchend", bloquearDoubleTap, { passive: false });
+
+    //document.addEventListener("touchend", deactiveTouchFunctions, { passive: false });
 
     modal.style.display = "flex";
 }
 
 
 function fecharModal() {
-    activeTouchFunctions();
+    //activeTouchFunctions();
     modal.style.display = "none";
 }
 
@@ -74,7 +74,7 @@ function preloadImages(lista) {
 
 function activeTouchFunctions(){
     document.body.classList.remove("modal-open");
-    document.removeEventListener("touchend", bloquearDoubleTap);
+    document.removeEventListener("touchend", deactiveTouchFunctions);
 }
 
 function deactiveTouchFunctions(){
