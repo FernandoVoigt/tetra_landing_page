@@ -40,13 +40,18 @@ const imagemModal = document.getElementById("imagemModal");
 function abrirModal(tema) {
     temaAtual = tema;
     index = 0;
+
     preloadImages(images[temaAtual]);
     imagemModal.src = images[temaAtual][index];
+    
+    document.addEventListener("touchend", bloquearDoubleTap, { passive: false });
+
     modal.style.display = "flex";
 }
 
 
 function fecharModal() {
+    activeTouchFunctions();
     modal.style.display = "none";
 }
 
@@ -65,4 +70,19 @@ function preloadImages(lista) {
         const img = new Image();
         img.src = src;
     });
+}
+
+function activeTouchFunctions(){
+    document.body.classList.remove("modal-open");
+    document.removeEventListener("touchend", bloquearDoubleTap);
+}
+
+function deactiveTouchFunctions(){
+    document.body.classList.add("modal-open");
+
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+    }
+    lastTouchEnd = now;
 }

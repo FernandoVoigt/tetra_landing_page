@@ -71,6 +71,11 @@
     z-index: 200;
 }
 
+body.modal-open {
+  touch-action: none;
+  overflow: hidden;
+}
+
 .modal-content {
     display: flex;
     align-items: center;
