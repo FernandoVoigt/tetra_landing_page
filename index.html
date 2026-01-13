@@ -97,12 +97,13 @@
 
     <!-- MODAL -->
     <div class="modal" id="modal">
-        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <button class="prev" onclick="mudarSlide(-1)">❮</button>
+            <img id="imagemModal">
+            <button class="next" onclick="mudarSlide(1)">❯</button>
+        </div>
 
-
-        <button class="prev" onclick="mudarSlide(-1)">❮</button>
-        <img id="imagemModal">
-        <button class="next" onclick="mudarSlide(1)">❯</button>
     </div>
 
     <script src="script.js"></script>

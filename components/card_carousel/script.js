@@ -40,6 +40,7 @@ const imagemModal = document.getElementById("imagemModal");
 function abrirModal(tema) {
     temaAtual = tema;
     index = 0;
+    preloadImages(images[temaAtual]);
     imagemModal.src = images[temaAtual][index];
     modal.style.display = "flex";
 }
@@ -57,4 +58,11 @@ function mudarSlide(direcao) {
     if (index >= images[temaAtual].length) index = 0;
 
     imagemModal.src = images[temaAtual][index];
+}
+
+function preloadImages(lista) {
+    lista.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
 }

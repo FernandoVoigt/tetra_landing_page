@@ -71,6 +71,13 @@
     z-index: 200;
 }
 
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    position: fixed;
+}
 
 .modal img {
     max-width: 80%;
@@ -80,19 +87,33 @@
 .fechar {
     margin: 10px;
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: -80px;
+    right: -20px;
     font-size: 30px;
     color: white;
     cursor: pointer;
+    padding: 20px;
 }
 
 .prev,
-.next {
-    margin: 0 15px;
+.next {    
     background: none;
     color: white;
     font-size: 40px;
     border: none;
     cursor: pointer;
+    z-index: 98;
+    position: absolute;    
 }
+
+.prev
+{
+    padding: 100px 100px 100px 10px;
+    left: 0;
+} 
+
+.next
+{
+    padding: 100px 10px 100px 100px;
+    right: 0;
+} 
